@@ -9,20 +9,30 @@
 :root {
     --right-bgrnd-clr: rgb(250,250,250);
     --atribution-clr: rgba(240,240,240,0.7);
+    --wrap-limit: 60ch;
+    --large-text-size: clamp(12px, 2.5vh, 50px);
+    --label-text-size: 10px;
+    --padding-left-right-col: 2.8vw;
 }
 * {
     box-sizing: border-box;
 }
-body {
+body, p {
     margin: 0;
     padding: 0;
+}
+body {
     height: 100vh; 
+    font-family: system-ui, sans-serif;
 }
-input {
-    display: block;
+.bold-text {
+    font-size: var(--large-text-size);
+    font-weight: 700;
+    color: rgb(50,50,50);
 }
-span a {
-    color: var(--atribution-clr);
+.text-wrap {
+    width: var(--wrap-limit);
+    word-wrap: break-word;
 }
 .container {
     display: flex;
@@ -31,7 +41,7 @@ span a {
 .left {
     background-image: url("images/leaves.jpg");
     background-size: cover;
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: column;
 }
@@ -41,6 +51,7 @@ span a {
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .logo-container {
     background-color: rgba(0,0,0,0.5);
     height: 50%;
@@ -74,39 +85,95 @@ span a {
     color: var(--atribution-clr);
     font-size: 1vw;
 }
+span a {
+    color: var(--atribution-clr);
+}
 .right {
-    /* background-color: yellow; */
-    /* border: 1px solid blue; */
-    flex: 2;
+    flex: 3;
+}
+.right-container {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
+}
+.right-row {
+    padding-left: var(--padding-left-right-col);
+    padding-top: 20px;
 }
 .right-upper {
-    /* background-color: purple; */
-    /* background-color: rgb(250,250,250); */
     background-color: var(--right-bgrnd-clr);
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+p + p {
+    margin-top: 10px;
+    margin-bottom: calc(10px + 1vw);
 }
 .right-middle {
     /* background-color: yellow; */
     background-color: white;
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
     flex: 1;
+    padding-bottom: 20px;
+}
+.right-middle .bold-text {
+    margin-bottom: 15px;
+}
+label {
+    font-size: var(--label-text-size); 
+    letter-spacing: 0.2ch;
+}
+input {
+    display: block;
+    border: 1px solid #e5e7eb;
+    width: calc(50px + 20vh);
+    height: calc(15px + 1.5vh);
+    border-radius: 3px;
+}
+input[type="password"]:invalid {
+    border: 1px solid red;
+}
+input:focus {
+    border: 1px solid rgb(71, 157, 255);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
 }
 .form {
     display: flex;
     justify-content: left;
+    gap: 4vw;
 }
 .form-left {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .form-right {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 .right-lower {
     /* background-color: cyan; */
     background-color: (--right-bgrnd-clr);
     flex: 1;
+}
+.submit-btn {
+    background-color: #596D48;
+    color: white;
+    width: calc(150px + 4vw);
+    padding: 10px 30px;
+    font-size: calc(12px + 0.3vw);
+    font-weight: bold;
+    border-radius: 8px;
+}
+button + p {
+    margin-top: 20px;
+}
+.a-login {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: bold;
 }

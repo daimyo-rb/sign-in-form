@@ -23,49 +23,51 @@
       </div>
     </div>
     <div class="right">
-      <div class="right-upper">
-        <p>This is not a real online service! You know you 
-          need something like this in your life to help you 
-          realize your deepest dreams.<br>Sign up now to get started.
-        </p>
-        <p>You know you want to.</p>
-      </div>
-      <div class="right-middle">
-        <p>Let's do this!</p>
-        <form class="form">
-          <div class="form-left">
-            <div class="form-elem">
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" id="first-name" name="first-name">
+      <div class="right-container">
+        <div class="right-upper right-row">
+          <p class="bold-text text-wrap">This is not a real online service! You know you
+            need something like this in your life to help you
+            realize your deepest dreams.<br>Sign up <i>now</i> to get started.
+          </p>
+          <p class="bold-text">You <i>know</i> you want to.</p>
+        </div>
+        <div class="right-middle right-row">
+          <p class="bold-text">Let's do this!</p>
+          <form class="form" id="form1">
+            <div class="form-left">
+              <div class="form-elem">
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" id="first-name" name="first-name">
+              </div>
+              <div class="form-elem">
+                <label for="first-name">EMAIL</label>
+                <input type="email" id="email" name="email">
+              </div>
+              <div class="form-elem">
+                <label for="password-1">PASSWORD</label>
+                <input type="password" id="password-1" name="password" minlength="8" required>
+              </div>
             </div>
-            <div class="form-elem">
-              <label for="first-name">EMAIL</label>
-              <input type="email" id="email" name="email">
+            <div class="form-right">
+              <div class="form-elem">
+                <label for="last-name">LAST NAME</label>
+                <input type="text" id="last-name" name="last-name">
+              </div>
+              <div class="form-elem">
+                <label for="phone">PASSWORD</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              <div class="form-elem">
+                <label for="password-2">CONFIRM PASSWORD</label>
+                <input type="password" id="password-2" minlength="8" required>
+              </div>
             </div>
-            <div class="form-elem">
-              <label for="password-1">PASSWORD</label>
-              <input type="password" id="password-1" name="password">
-            </div>
-          </div>
-          <div class="form-right">
-            <div class="form-elem">
-              <label for="last-name">LAST NAME</label>
-              <input type="text" id="last-name" name="last-name">
-            </div>
-            <div class="form-elem">
-              <label for="phone">PASSWORD</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-            <div class="form-elem">
-              <label for="password-2">CONFIRM PASSWORD</label>
-              <input type="password" id="password-2">
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="right-lower">
-        <button>Create Account</button>
-        <p>Already have an account? Log in</p>
+          </form>
+        </div>
+        <div class="right-lower right-row">
+          <button class="submit-btn" type="submit" form="form1">Create Account</button>
+          <p>Already have an account? <a class="a-login" href="" target="_blank">Log in</a></p>
+        </div>
       </div>
     </div>
   </div>
