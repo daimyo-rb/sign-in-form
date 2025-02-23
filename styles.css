@@ -8,21 +8,15 @@ body {
     background-color: blue;
     height: 100vh; 
 }
+input {
+    display: block;
+}
   
 /* Container setup for flexbox layout */
 .container {
     display: flex;
     height: 100%;  
 }
-
-
-/* Styling for columns */
-.column {
-    background-color: green;
-    border: 1px solid black;
-    flex: 1;
-}
-
 .left {
     background-color: red;
     border: 1px solid purple;
@@ -30,7 +24,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .left-upper {
     background-color: orange;
     flex: 1;
@@ -73,4 +66,30 @@ body {
     background-color: yellow;
     border: 1px solid blue;
     flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+.right-upper {
+    background-color: purple;
+    flex: 1;
+}
+.right-middle {
+    background-color: yellow;
+    flex: 1;
+}
+.form {
+    display: flex;
+    justify-content: left;
+}
+.form-left {
+    display: flex;
+    flex-direction: column;
+}
+.form-right {
+    display: flex;
+    flex-direction: column;
+}
+.right-lower {
+    background-color: cyan;
+    flex: 1;
 }
