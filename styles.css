@@ -1,3 +1,76 @@
-h1 {
-    color: red;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+    height: 100vh; 
+}
+  
+/* Container setup for flexbox layout */
+.container {
+    display: flex;
+    height: 100%;  
+}
+
+
+/* Styling for columns */
+.column {
+    background-color: green;
+    border: 1px solid black;
+    flex: 1;
+}
+
+.left {
+    background-color: red;
+    border: 1px solid purple;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-upper {
+    background-color: orange;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.logo-container {
+    background-color: blue;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.logo-img {
+    background-color: yellow;
+    width: 40px;
+}
+.logo-text {
+    background-color: red;
+    width: 60px;
+}
+.left-lower {
+    background-color: green;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.credit {
+    background-color: red;
+    height: 5px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.right {
+    background-color: yellow;
+    border: 1px solid blue;
+    flex: 2;
 }
